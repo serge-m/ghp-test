@@ -308,58 +308,66 @@
 	<!-- gallery -->
 	<div id="gallery" class="section md-padding bg-grey">
 
-		<div class="container">
-			<!--<div class="row">-->
-				<!--<div class="col-sm-12">-->
-					<!--<div class="embed-responsive embed-responsive-16by9">-->
-						<!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KpllAjxOIUU"></iframe>-->
-					<!--</div>-->
-				<!--</div>-->
-			<!--</div>-->
-			<!--<div class="row">-->
-				<!--<div class="col-sm-12">-->
-					<!--<div class="embed-responsive embed-responsive-16by9">-->
-						<!--<iframe class="embed-responsive-item" src="//www.youtube.com/embed/KpllAjxOIUU"></iframe>-->
-					<!--</div>-->
-				<!--</div>-->
-			<!--</div>-->
 
-			<div class="row">
-				<div class="col-sm-8">
-					<div class="embed-responsive embed-responsive-16by9">
-						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KpllAjxOIUU"></iframe>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="embed-responsive embed-responsive-16by9">
-						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KpllAjxOIUU"></iframe>
-					</div>
-					<div class="embed-responsive embed-responsive-16by9">
-						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KpllAjxOIUU"></iframe>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-4">
-					<div class="embed-responsive embed-responsive-16by9">
-						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KpllAjxOIUU"></iframe>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="embed-responsive embed-responsive-16by9">
-						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KpllAjxOIUU"></iframe>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="embed-responsive embed-responsive-16by9">
-						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KpllAjxOIUU"></iframe>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="container">
+            <div class="row">
+                <div id="myCarousel" class="carousel fdi-Carousel slide">
+                    <!-- Carousel items -->
+                    <div class="carousel fdi-Carousel slide" id="eventCarousel" data-interval="0">
+                        <div class="carousel-inner onebyone-carosel">
+                            <div class="item active">
+                                <div class="col-md-3">
+                                    <a href="#"><img src="http://placehold.it/250x250" class="img-responsive center-block"></a>
+
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-md-3">
+                                    <a href="#"><img src="http://placehold.it/250x250" class="img-responsive center-block"></a>
+
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-md-3">
+                                    <a href="#"><img src="http://placehold.it/250x250" class="img-responsive center-block"></a>
+
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-md-3">
+                                    <a href="#"><img src="http://placehold.it/250x250" class="img-responsive center-block"></a>
+
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-md-3">
+                                    <a href="#"><img src="http://placehold.it/250x250" class="img-responsive center-block"></a>
+
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-md-3">
+                                    <a href="#"><img src="http://placehold.it/250x250" class="img-responsive center-block"></a>
+
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-md-3">
+                                    <a href="#"><img src="http://placehold.it/250x250" class="img-responsive center-block"></a>
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <a class="left carousel-control" href="#eventCarousel" data-slide="prev"></a>
+                        <a class="right carousel-control" href="#eventCarousel" data-slide="next"></a>
+                    </div>
+                    <!--/carousel-inner-->
+                </div><!--/myCarousel-->
+            </div>
+        </div>
 
 
-	</div>
+    </div>
 	<!-- /gallery -->
 
 	<!--&lt;!&ndash; gallery &ndash;&gt;-->
@@ -1313,6 +1321,30 @@
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function () {
+//            $('#myCarousel').carousel({
+//                interval: 2000
+//            })
+            $('.carousel-inner .item').each(function () {
+                var next = $(this).next();
+                if (!next.length) {
+                    next = $(this).siblings(':first');
+                }
+                next.children(':first-child').clone().appendTo($(this));
+
+                for (var i=0;i<2;i++) {
+                    next=next.next();
+                    if (!next.length) {
+                        next = $(this).siblings(':first');
+                    }
+
+                    next.children(':first-child').clone().appendTo($(this));
+                }
+            });
+        });
+
+    </script>
 
 </body>
 
