@@ -99,7 +99,7 @@
         lazyLoad:true,
         center:false,
         nav:true,
-		dots: false,
+        dots: false,
         responsive:{
             480:{
                 items:2
