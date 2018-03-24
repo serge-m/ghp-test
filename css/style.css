@@ -1801,3 +1801,17 @@ header {
     background-color: blue;
     display: block;
 }
+
+
+/*---------------------------flight selector -------------------*/
+.flight-selector.bootstrap-select button{
+    padding: 10px 35px;
+    margin: 10px;
+    /*border: 4px solid transparent;*/
+    /*width: 300px;*/
+}
+
+/*.flight-selector div {*/
+    /*width: 400px;*/
+    /*!*margin: 10px;*!*/
+/*}*/

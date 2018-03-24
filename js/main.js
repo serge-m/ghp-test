@@ -110,4 +110,6 @@
         }
     });
 
+    $('.selectpicker').selectpicker();
+
 })(jQuery);
