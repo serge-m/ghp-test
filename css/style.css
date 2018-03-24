@@ -1795,45 +1795,6 @@ header {
 
 
 /* ----------------------------carousel -----------------------*/
-/*.carousel-inner.onebyone-carosel { margin: auto; width: 100%; }*/
-/*.onebyone-carosel .active.left { left: -25.00%; }*/
-/*.onebyone-carosel .active.right { left: 25.00%; }*/
-/*.onebyone-carosel .next { left: 25.00%; }*/
-/*.onebyone-carosel .prev { left: -25.00%; }*/
-/*.carousel-control.narrow {width: 5%;}*/
-
-/*.carousel-inner .active.left { left: -25%; }*/
-/*.carousel-inner .active.right { left: 25%; }*/
-/*.carousel-inner .next        { left:  25%; }*/
-/*.carousel-inner .prev		 { left: -25%; }*/
-/*.carousel-control 			 { width:  4%; }*/
-/*.carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}*/
-
-.carousel-inner .active.left { left: -25%; }
-.carousel-inner .active.right { left: 25%; }
-.carousel-inner .next        { left:  25%; }
-.carousel-inner .prev		 { left: -25%; }
-
-
-
-.carousel-control {
-    display: block;
-    width: 60px;
-    height: 100%;
-    font-size: 100px;
-    background: rgba(0, 0, 0, 0);
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 300;
-    line-height: 2;
+.item-video {
+    height: 400px;
 }
-
-.carousel-fade .carousel-inner .active.left,
-.carousel-fade .carousel-inner .active.right {
-    left: 0;
-    opacity: 0;
-    z-index: 1;
-}
-.carousel-fade .carousel-inner .next.left, .carousel-fade .carousel-inner .prev.right { opacity: 1; }
-
-.carousel-fade .carousel-control { z-index: 2; }
-
