@@ -112,4 +112,25 @@
 
     $('.selectpicker').selectpicker();
 
+    /// imgcheckbox start
+
+    $(".exampleone img").imgCheckbox();
+    $(".exampletwo img").imgCheckbox({
+        "styles": {
+            "span.imgCheckbox.imgChked img": {
+                "filter": "blur(5px)",
+                "-webkit-filter": "blur(5px)",
+                "transform": "scale(0.9)"
+            }
+        }
+    });
+    // $(".exampleone").submit(function() {
+    //     $("body").css({"opacity": 0}).animate({"opacity": 1}, "fast");
+    //     $(".formoutput").text($(this).serialize());
+    //     return false;
+    // })
+
+    /// imgcheckbox end
+
+
 })(jQuery);
