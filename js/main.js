@@ -125,7 +125,23 @@
                 items:5
             }
         }
-    })
+    });
+
+    $('.carousel-with-modals').owlCarousel({
+        center: false,
+        items: 2,
+        loop: true,
+        margin: 10,
+        autoWidth:true,
+        responsive: {
+            480:{
+                items:2
+            },
+            600:{
+                items:4
+            }
+        }
+    });
 
     $('.selectpicker').selectpicker();
 

@@ -1818,5 +1818,10 @@ header {
 
 /* --------------------my modals ---------------------*/
 .video-description-full-version {
-    visibility: hidden;
+    display: none;
+}
+
+.carousel-with-modals-item {
+    max-height: 400px;
+    display: block;
 }
