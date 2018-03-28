@@ -1815,3 +1815,8 @@ header {
     /*width: 400px;*/
     /*!*margin: 10px;*!*/
 /*}*/
+
+/* --------------------my modals ---------------------*/
+.video-description-full-version {
+    visibility: hidden;
+}
