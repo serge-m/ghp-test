@@ -30,8 +30,6 @@
 
 	<!-- Custom stlylesheet -->
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
-
-	<link rel="stylesheet" href="plyr/plyr.css">
 </head>
 
 <body>
@@ -194,51 +192,7 @@
 	<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
 	<script type="text/javascript" src="js/bootstrap-select.min.js"></script>
 	<script type="text/javascript" src="js/jquery.imgcheckbox.js"></script>
-	<script src="plyr/plyr.js"></script>
-	<!--<script type="text/javascript" src="js/main.js"></script>-->
-	<script type="text/javascript">
-        (function($) {
-
-            // Code goes here
-            $(function(){
-                $('.modal').on('hidden.bs.modal', function (e) {
-                    // for html5
-                    let video = $(this).find("video");
-                    video.each(function () { this.pause() });
-
-					// for vimeo
-                    let iframe = $(this).find("iframe");
-                    iframe.attr("src", iframe.attr("src"));
-                });
-                $('.modal').on('show.bs.modal', function (event) {
-                    var button = $(event.relatedTarget); // Button that triggered the modal
-                    var video_url = button.data('video-url'); // Extract info from data-* attributes
-                    if (video_url === undefined) {
-                        video_url = button.find('video').attr('src');
-                    }
-
-                    // alert(button.text() + ' ' + video_url + ' ' + button.find('.full').html());
-
-					// replacing contents
-					var modal = $(this);
-                    modal.find('.modal-full-content').html('<div>' + button.find('.video-description-full-version').html() + '</div>');
-
-
-					// autoplay
-                    var video = modal.find('.modal-body video');
-					video.attr('src', video_url);
-                    video.each(function () { this.play() });
-
-                })
-            });
-
-
-
-
-        })(jQuery);
-
-
-	</script>
+	<script type="text/javascript" src="js/main.js"></script>
 
 
 </body>
