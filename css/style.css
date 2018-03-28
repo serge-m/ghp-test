@@ -1798,7 +1798,7 @@ header {
 
 .item-video {
     height: 400px;
-    background-color: blue;
+    /*background-color: blue;*/
     display: block;
 }
 

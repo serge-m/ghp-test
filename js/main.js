@@ -110,6 +110,23 @@
         }
     });
 
+    $('.video-slider-manual').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    })
+
     $('.selectpicker').selectpicker();
 
     /// imgcheckbox start
@@ -124,6 +141,47 @@
             }
         }
     });
+
+
+
+
+
+    // var video = $("#myVideo");
+    // video.on('click', function(e){
+    //     var vid = video[0];
+    //     vid.play();
+    //     if (vid.requestFullscreen) {
+    //         vid.requestFullscreen();
+    //     } else if (vid.mozRequestFullScreen) {
+    //         vid.mozRequestFullScreen();
+    //     } else if (vid.webkitRequestFullscreen) {
+    //         vid.webkitRequestFullscreen();
+    //     }
+    // });
+    //
+    //
+    //
+    // const players = Array.from(document.querySelectorAll('.my-plyr-player')).map(player => {
+    // 	var p = new Plyr(player);
+    //     // p.on('play', event => {
+    //     	// // alert('123132');
+    //     	// p.fullscreen.enter();
+		// // });
+    //
+		// // p.on('exitfullscreen', event => {
+		// // 	p.pause();
+		// // });
+		// return p;
+    // });
+
+
+    // $('.modal').on('hide', function () {
+    //     // $('div.modal-body').html('');
+		// alert('adsad');
+    // });
+
+
+
     // $(".exampleone").submit(function() {
     //     $("body").css({"opacity": 0}).animate({"opacity": 1}, "fast");
     //     $(".formoutput").text($(this).serialize());
@@ -131,6 +189,21 @@
     // })
 
     /// imgcheckbox end
+
+    // $("#myModal").on('hidden.bs.modal', function (e) {
+    //     $("#myModal iframe").attr("src", $("#myModal iframe").attr("src"));
+    //     alert('123');
+    // });
+
+    // Code goes here
+    $(function(){
+        $('.modal').on('hidden.bs.modal', function (e) {
+            var iframe = $(this).find("iframe");
+            iframe.attr("src", $iframe.attr("src"));
+            alert("232");
+        });
+    });
+
 
 
 })(jQuery);
