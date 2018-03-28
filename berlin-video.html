@@ -134,12 +134,14 @@
 				<div class="col-md-12">
 
 					<div>
-						<a href="#" data-toggle="modal" data-target="#video1">Video 1</a>
+						<a href="#" data-toggle="modal" data-target="#video1" data-whatever="./video/remixed/_24StundenBerlin5UhrSchwarzesCafé__itag_18__mimetype_video_mp4__res_360p__fps_30__vcodec_avc142001E__acodec_mp4a402__abr_96kbpsmp4.mp4">Video 1</a>
+						<a href="#" data-toggle="modal" data-target="#video1" data-whatever="./video/remixed/_AbandonedBerlinDocumentary__itag_137__mimetype_video_mp4__res_1080p__fps_30__vcodec_avc1640028__acodec_None__abr_Nonemp4.mp4.mp4">Video 1+</a>
 						<div class="modal fade" id="video1">
 							<div class="modal-dialog">
 								<div class="modal-content">
 
 									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">New message</h5>
 										<button type="button" class="close" data-dismiss="modal" >
 											<span aria-hidden="true">&times;</span>
 										</button>
@@ -148,7 +150,7 @@
 
 									<div class="modal-body">
 
-										<video src="./video/remixed/_24StundenBerlin5UhrSchwarzesCafé__itag_18__mimetype_video_mp4__res_360p__fps_30__vcodec_avc142001E__acodec_mp4a402__abr_96kbpsmp4.mp4" width="500" height="300" controls>
+										<video src="./video/remixed/_AbandonedBerlinDocumentary__itag_137__mimetype_video_mp4__res_1080p__fps_30__vcodec_avc1640028__acodec_None__abr_Nonemp4.mp4.mp4" width="500" height="300" controls>
 
 										</video>
 
@@ -169,6 +171,7 @@
 								<div class="modal-content">
 
 									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel2">New message</h5>
 										<button type="button" class="close" data-dismiss="modal" >
 											<span aria-hidden="true">&times;</span>
 										</button>
@@ -223,7 +226,21 @@
                     let iframe = $(this).find("iframe");
                     iframe.attr("src", iframe.attr("src"));
                 });
+                $('.modal').on('show.bs.modal', function (event) {
+                    var button = $(event.relatedTarget); // Button that triggered the modal
+                    var recipient = button.data('whatever'); // Extract info from data-* attributes
+                    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+                    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+                    var modal = $(this);
+                    modal.find('.modal-title').text('New message to ' + recipient);
+                    modal.find('.modal-body input').val(recipient);
+					var video = modal.find('.modal-body video');
+					video.attr('src', recipient);
+                    video.each(function () { this.play() });
+
+                })
             });
+
 
 
 
