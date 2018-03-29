@@ -129,18 +129,9 @@
 
     $('.carousel-with-modals').owlCarousel({
         center: false,
-        items: 2,
+        items: 5,
         loop: true,
         margin: 10,
-        autoWidth:true,
-        responsive: {
-            480:{
-                items:2
-            },
-            600:{
-                items:4
-            }
-        }
     });
 
     $('.selectpicker').selectpicker();
@@ -159,34 +150,34 @@
     });
 
 
-        $('.modal').on('hidden.bs.modal', function (e) {
-            // for html5
-            let video = $(this).find("video");
-            video.each(function () { this.pause() });
+    $('.modal').on('hidden.bs.modal', function (e) {
+        // for html5
+        let video = $(this).find("video");
+        video.each(function () { this.pause() });
 
-            // for vimeo
-            let iframe = $(this).find("iframe");
-            iframe.attr("src", iframe.attr("src"));
-        }).on('show.bs.modal', function (event) {
-            var button = $(event.relatedTarget); // Button that triggered the modal
-            var video_url = button.data('video-url'); // Extract info from data-* attributes
-            if (video_url === undefined) {
-                video_url = button.find('video').attr('src');
-            }
+        // for vimeo
+        let iframe = $(this).find("iframe");
+        iframe.attr("src", iframe.attr("src"));
+    }).on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget); // Button that triggered the modal
+        var video_url = button.data('video-url'); // Extract info from data-* attributes
+        if (video_url === undefined) {
+            video_url = button.find('video').attr('src');
+        }
 
-            // alert(button.text() + ' ' + video_url + ' ' + button.find('.full').html());
+        // alert(button.text() + ' ' + video_url + ' ' + button.find('.full').html());
 
-            // replacing contents
-            var modal = $(this);
-            modal.find('.modal-full-content').html('<div>' + button.find('.video-description-full-version').html() + '</div>');
+        // replacing contents
+        var modal = $(this);
+        modal.find('.modal-full-content').html('<div>' + button.find('.video-description-full-version').html() + '</div>');
 
 
-            // autoplay
-            var video = modal.find('.modal-body video');
-            video.attr('src', video_url);
-            video.each(function () { this.play() });
+        // autoplay
+        var video = modal.find('.modal-body video');
+        video.attr('src', video_url);
+        video.each(function () { this.play() });
 
-        });
+    });
 
 
 

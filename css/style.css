@@ -1822,6 +1822,10 @@ header {
 }
 
 .carousel-with-modals-item {
-    max-height: 400px;
-    display: block;
+    /*height: 480px;*/
+    /*display: block;*/
+}
+
+.carousel-with-modals-item video{
+    width: 100%;
 }
