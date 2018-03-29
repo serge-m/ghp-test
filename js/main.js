@@ -136,19 +136,6 @@
 
     $('.selectpicker').selectpicker();
 
-    /// imgcheckbox start
-
-    $(".exampleone img").imgCheckbox();
-    $(".exampletwo img").imgCheckbox({
-        "styles": {
-            "span.imgCheckbox.imgChked img": {
-                "filter": "blur(5px)",
-                "-webkit-filter": "blur(5px)",
-                "transform": "scale(0.9)"
-            }
-        }
-    });
-
 
     $('.modal').on('hidden.bs.modal', function (e) {
         // for html5
@@ -159,23 +146,33 @@
         let iframe = $(this).find("iframe");
         iframe.attr("src", iframe.attr("src"));
     }).on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget); // Button that triggered the modal
-        var video_url = button.data('video-url'); // Extract info from data-* attributes
-        if (video_url === undefined) {
-            video_url = button.find('video').attr('src');
+        const button = $(event.relatedTarget); // Button that triggered the modal
+
+        let video_url = button.data('video-url'); // Extract info from data-* attributes
+        if (video_url === undefined) {            // or from source.src attribute
+            video_url = button.find('video').find('source').attr('src');
         }
+
+        const poster_url = button.find('video').attr('poster');
 
         // alert(button.text() + ' ' + video_url + ' ' + button.find('.full').html());
 
+        let description_html = button.find('.video-description-full-version').html();
+        if (description_html === undefined) {
+            description_html = '';
+        }
         // replacing contents
-        var modal = $(this);
-        modal.find('.modal-full-content').html('<div>' + button.find('.video-description-full-version').html() + '</div>');
+        let modal = $(this);
+        modal.find('.modal-full-content').html('<div>' + description_html + '</div>');
 
 
         // autoplay
-        var video = modal.find('.modal-body video');
+        let video = modal.find('.modal-body video');
         video.attr('src', video_url);
-        video.each(function () { this.play() });
+        // video.each(function () { this.play() });
+        if (poster_url) {
+            video.attr('poster', poster_url);
+        }
 
     });
 
