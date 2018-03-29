@@ -150,7 +150,7 @@
 
         let video_url = button.data('video-url'); // Extract info from data-* attributes
         if (video_url === undefined) {            // or from source.src attribute
-            video_url = button.find('video').find('source').attr('src');
+            video_url = button.find('video').find('source').data('src');
         }
 
         const poster_url = button.find('video').attr('poster');
