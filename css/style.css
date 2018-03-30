@@ -1906,3 +1906,16 @@ header {
     padding: 20px;
 }
 
+/* --------------------Premium content---------------------*/
+.premium {
+    position: absolute;
+    z-index: 9;
+    font-size: 27px;
+    color: gold;
+    padding: 11px;
+    width: 100%;
+    direction: rtl;
+}
+.carousel-with-modals-item a{
+	width:100%;
+}
