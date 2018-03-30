@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 
 <head>
 	<meta charset="utf-8">
@@ -35,7 +35,6 @@
 <body>
 	<!-- Header -->
 	<header>
-
 		<!-- Nav -->
 		<nav id="nav" class="navbar">
 			<div class="container">
@@ -59,85 +58,190 @@
 
 				<!--  Main navigation  -->
 				<ul class="main-nav nav navbar-nav navbar-right">
-					<li><a href="#home">Home</a></li>
-					<li><a href="#gallery">Video</a></li>
-					<li><a href="#experiences">Experiences</a></li>
-					<!--<li><a href="#pricing">Prices</a></li>-->
-					<!--<li><a href="#team">Team</a></li>-->
-					<li class="has-dropdown"><a href="#blog">Blog</a>
-						<ul class="dropdown">
-							<li><a href="blog-single.html">blog post</a></li>
-						</ul>
-					</li>
-					<li><a href="#contact">Contact</a></li>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="video.html">Video</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="feedback.html">Feedback</a></li>
 				</ul>
 				<!-- /Main navigation -->
 
 			</div>
 		</nav>
 		<!-- /Nav -->
-
-
-
 	</header>
 	<!-- /Header -->
 
-	<!-- gallery -->
-	<div id="survey" class="section">
-		<!-- Container -->
-		<div class="container">
-			<!-- Row -->
-			<div class="row">
-					<div class="col-md-3">
-					</div>
-					<div class="col-md-3">
-					</div>
-					<div class="col-md-3">
+	<div class="container">
 
+		<div class="modal fade" id="modal-for-video">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-body">
+						<video src="" width="100%" controls>
+						</video>
+						<div class="modal-full-content">default</div>
 					</div>
-					<div class="col-md-3">
 
-					</div>
+				</div>
 			</div>
-			<!-- /Row -->
-
 		</div>
-		<!-- /Container -->
+
 
 	</div>
-	<!-- /gallery -->
 
-    <!-- gallery -->
-    <div id="gallery" class="section md-padding">
+	<!-- gallery -->
+	<div id="gallery" class="section">
 
 
-        <!-- Container -->
-        <div class="container">
-			<!-- Row -->
-            <div class="row">
-                <div class="col-md-12">
-					<h2>Foodie</h2>
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Recommendations row -->
+			<div class="row">
+				<div class="col-md-12">
+					<h2>I am a foodie</h2>
 					<div class="carousel-with-modals owl-carousel owl-theme">
-						<div class="carousel-with-modals-item">
-							<a href="#" data-toggle="modal" data-target="#modal-for-video">
 
-								<video src="./video/remixed/_AbandonedBerlinDocumentary__itag_137__mimetype_video_mp4__res_1080p__fps_30__vcodec_avc1640028__acodec_None__abr_Nonemp4.mp4.mp4">
+						<div data-merge="2" class="carousel-with-modals-item">
+							<a href="#" data-toggle="modal" data-target="#modal-for-video">
+								<div class="owl-video-play-icon"></div>
+								<video poster="//view.vzaar.com/13949685/image">
+									<source data-src="//view.vzaar.com/13949685/video"/>
 								</video>
-								<p>AbandonedBerlinDocumentary</p>
+								<p>Highsnobiety Visits | Burgers & Hip Hop</p>
 								<div class="video-description-full-version">
-									<h1>AbandonedBerlinDocumentary</h1>
-									<p>AbandonedBerlinDocumentary</p>
+									<h3>Highsnobiety Visits | Burgers & Hip Hop</h3>
+								</div>
+							</a>
+						</div>
+
+						<div data-merge="2" class="carousel-with-modals-item">
+							<a href="#" data-toggle="modal" data-target="#modal-for-video">
+								<div class="owl-video-play-icon"></div>
+								<video poster="//view.vzaar.com/13949687/image">
+									<source data-src="//view.vzaar.com/13949687/video"/>
+								</video>
+								<p>Highsnobiety Visits | The Barn Berlin</p>
+								<div class="video-description-full-version">
+									<h3>Highsnobiety Visits | The Barn Berlin</h3>
+								</div>
+							</a>
+						</div>
+
+						<div data-merge="2" class="carousel-with-modals-item">
+							<a href="#" data-toggle="modal" data-target="#modal-for-video">
+								<div class="owl-video-play-icon"></div>
+								<video poster="//view.vzaar.com/13949718/image">
+									<source data-src="//view.vzaar.com/13949718/video"/>
+								</video>
+								<p>Street Food Berlin - Here Are Our Top 5 Restaurants</p>
+								<div class="video-description-full-version">
+									<h3>Street Food Berlin - Here Are Our Top 5 Restaurants</h3>
+								</div>
+							</a>
+						</div>
+
+						<div data-merge="2" class="carousel-with-modals-item">
+							<a href="#" data-toggle="modal" data-target="#modal-for-video">
+								<div class="owl-video-play-icon"></div>
+								<video poster="//view.vzaar.com/13949647/image">
+									<source data-src="//view.vzaar.com/13949647/video"/>
+								</video>
+								<p>24 Stunden Berlin: 5 Uhr Schwarzes Café</p>
+								<div class="video-description-full-version">
+									<h3>24 Stunden Berlin: 5 Uhr Schwarzes Café</h3>
+								</div>
+							</a>
+						</div>
+
+						<div data-merge="2" class="carousel-with-modals-item">
+							<a href="#" data-toggle="modal" data-target="#modal-for-video">
+								<div class="owl-video-play-icon"></div>
+								<video poster="//view.vzaar.com/13949719/image">
+									<source data-src="//view.vzaar.com/13949719/video"/>
+								</video>
+								<p>The Klunkerkranich bar in Berlin</p>
+								<div class="video-description-full-version">
+									<h3>The Klunkerkranich bar in Berlin</h3>
 								</div>
 							</a>
 						</div>
 
 					</div>
 
-                </div>
+				</div>
 				<!-- /Column -->
 
 			</div>
-			<!-- /Row -->
+			<!-- /Recommendations row -->
+
+			<!-- Popular in the VidVac community row -->
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Best Rated</h2>
+					<div class="carousel-with-modals owl-carousel owl-theme">
+
+
+						<div data-merge="2" class="carousel-with-modals-item">
+							<a href="#" data-toggle="modal" data-target="#modal-for-video">
+								<div class="owl-video-play-icon"></div>
+								<video poster="//view.vzaar.com/13949655/image">
+									<source data-src="//view.vzaar.com/13949655/video"/>
+								</video>
+								<p>An Afternoon with Günther Anton</p>
+								<div class="video-description-full-version">
+									<h3>An Afternoon with Günther Anton</h3>
+								</div>
+							</a>
+						</div>
+
+						<div data-merge="2" class="carousel-with-modals-item">
+							<a href="#" data-toggle="modal" data-target="#modal-for-video">
+								<div class="owl-video-play-icon"></div>
+								<video poster="//view.vzaar.com/13949674/image">
+									<source data-src="//view.vzaar.com/13949674/video"/>
+								</video>
+								<p>Diving Berlin</p>
+								<div class="video-description-full-version">
+									<h3>Diving Berlin</h3>
+								</div>
+							</a>
+						</div>
+
+						<div data-merge="2" class="carousel-with-modals-item">
+							<a href="#" data-toggle="modal" data-target="#modal-for-video">
+								<div class="owl-video-play-icon"></div>
+								<video poster="//view.vzaar.com/13949716/image">
+									<source data-src="//view.vzaar.com/13949716/video"/>
+								</video>
+								<p>Speaking Gardens - The Berlin urban gardening movement</p>
+								<div class="video-description-full-version">
+									<h3>Speaking Gardens - The Berlin urban gardening movement</h3>
+								</div>
+							</a>
+						</div>
+
+						<div data-merge="2" class="carousel-with-modals-item">
+							<a href="#" data-toggle="modal" data-target="#modal-for-video">
+								<div class="owl-video-play-icon"></div>
+								<video poster="//view.vzaar.com/13949659/image">
+									<source data-src="//view.vzaar.com/13949659/video"/>
+								</video>
+								<p>Berghain's bouncer Rummelsnuff shows us Berlin</p>
+								<div class="video-description-full-version">
+									<h3>Berghain's bouncer Rummelsnuff shows us Berlin</h3>
+								</div>
+							</a>
+						</div>
+
+
+					</div>
+
+				</div>
+				<!-- /Column -->
+
+			</div>
+			<!-- /Popular in the VidVac community row -->
 
 		</div>
 		<!-- /Container -->
@@ -145,6 +249,55 @@
 	</div>
 	<!-- /gallery -->
 
+
+	<!-- Footer -->
+	<footer id="footer" class="sm-padding bg-dark">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<div class="col-md-12">
+
+					<!-- footer logo -->
+					<div class="footer-logo">
+						<a href="index.html">
+							<h3 class="logo-alt white-text">VidVac</h3>
+						</a>
+					</div>
+					<!-- /footer logo -->
+
+					<!-- footer follow -->
+					<ul class="footer-follow">
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+					</ul>
+					<!-- /footer follow -->
+
+					<!-- footer copyright -->
+					<div class="footer-copyright">
+						<small>
+							<p>Copyright © 2018. All Rights Reserved.</p>
+                        </small>
+					</div>
+					<!-- /footer copyright -->
+
+				</div>
+
+			</div>
+			<!-- /Row -->
+
+		</div>
+		<!-- /Container -->
+
+	</footer>
+	<!-- /Footer -->
 
 
 
@@ -154,7 +307,6 @@
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
 	<script type="text/javascript" src="js/bootstrap-select.min.js"></script>
-	<script type="text/javascript" src="js/jquery.imgcheckbox.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
 
