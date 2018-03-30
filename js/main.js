@@ -90,48 +90,45 @@
 		}
 	});
 
-    $('.video-slider').owlCarousel({
-        items:1,
-        merge:false,
-        loop:true,
-        margin:10,
-        video:true,
-        lazyLoad:true,
-        center:false,
-        nav:true,
-        dots: false,
-        responsive:{
-            480:{
-                items:2
-            },
-            600:{
-                items:4
-            }
-        }
-    });
 
-    $('.video-slider-manual').owlCarousel({
-        loop:true,
-        margin:10,
+    $('.carousel-with-modals').owlCarousel({
+        center: false,
+        items: 3,
+        loop: true,
+        margin: 10,
         nav:true,
+        dots: true,
         responsive:{
             0:{
                 items:1
             },
             600:{
-                items:3
+                items:2
             },
             1000:{
-                items:5
+                items:3
             }
         }
     });
 
-    $('.carousel-with-modals').owlCarousel({
+    $('.carousel-with-modals-large').owlCarousel({
         center: false,
-        items: 5,
+        items: 3,
         loop: true,
         margin: 10,
+        nav:true,
+        dots: true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:2
+            }
+        }
     });
 
     $('.selectpicker').selectpicker();
@@ -142,9 +139,14 @@
         let video = $(this).find("video");
         video.each(function () { this.pause() });
 
+        // trying to stop loading after modal is closed
+        video.attr('src', '');
+
         // for vimeo
         let iframe = $(this).find("iframe");
         iframe.attr("src", iframe.attr("src"));
+
+
     }).on('show.bs.modal', function (event) {
         const button = $(event.relatedTarget); // Button that triggered the modal
 
@@ -166,15 +168,19 @@
         modal.find('.modal-full-content').html('<div>' + description_html + '</div>');
 
 
-        // autoplay
+
         let video = modal.find('.modal-body video');
         video.attr('src', video_url);
-        // video.each(function () { this.play() });
+        // video.each(function () { this.play() }); // autoplay
         if (poster_url) {
             video.attr('poster', poster_url);
         }
 
     });
+
+    $( ".carousel-with-modals-item" ).wrapInner( "<a href=\"#\" data-toggle=\"modal\" data-target=\"#modal-for-video\"></a>");
+    $( ".carousel-with-modals-item video" ).wrap( "<div style=\"position: relative;\"></div>").parent().prepend("<div class=\"owl-video-play-icon\"></div>");
+
 
 
 

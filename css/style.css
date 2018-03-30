@@ -711,7 +711,7 @@ header {
 
 .work {
     position: relative;
-    padding: 20px;
+    /*padding: 20px;*/
 }
 
 .work>img {
@@ -1905,3 +1905,4 @@ header {
 	text-align: center;
     padding: 20px;
 }
+
