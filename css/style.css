@@ -711,7 +711,7 @@ header {
 
 .work {
     position: relative;
-    padding: 20px;
+    /*padding: 20px;*/
 }
 
 .work>img {
@@ -1828,35 +1828,4 @@ header {
 
 .carousel-with-modals-item video {
     width: 100%;
-}
-
-/* --------------------Inspire me ---------------------*/
-.inspire-me1,
-.inspire-me2,
-.inspire-me3{
-    background-size: cover;
-    height: 200px;
-    padding: 0 5px;
-    border-right: white 10px solid;
-    margin-bottom: 20px;
-    background-repeat: no-repeat;
-    color: white!important;
-    font-size: 25px;
-    font-weight: 600;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.inspire-me1{
-	background-image: url(../img/inspire-me/1.jpg);
-}
-
-.inspire-me2{
-	background-image: url(../img/inspire-me/2.jpg);
-}
-
-.inspire-me3{
-	background-image: url(../img/inspire-me/3.jpg);
 }
