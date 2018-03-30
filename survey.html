@@ -82,70 +82,51 @@
 
 			<!-- Title Text -->
 			<div class="row">
-				<div class="col-sm-10 col-sm-offset-1">
-					<p>
-					<center>
+				<div class="col-sm-10 col-sm-offset-1 text-center">
+
 					<h1>Customize your VidVac!</h1>
 					<h2><small>What experiences look most appealing to you? Pick at least three.</small></h2>
-					</center>
-					</p>
+
 				</div>
 			</div>
 			<!-- /Title Text -->
-
+			<form class="exampleone">
 			<!-- First row of pictures-->
 			<div class="row">
-				<form class="exampleone">
-
-					<div class="col-sm-3">
-						<center>
+					<div class="col-sm-3 label-timeout">
 							<img src="img/survey_pics/TimeOut_daria-tumanova-311044-unsplash.jpg" class="img-responsive" alt="">
-						</center>
 					</div>
 
-					<div class="col-sm-3">
-						<center>
+					<div class="col-sm-3 label-explorer">
 							<img src="img/survey_pics/TimeOut_lucas-sankey-368390-unsplash.jpg" class="img-responsive" alt="">
-						</center>
 					</div>
 
-					<div class="col-sm-3">
-						<center>
+					<div class="col-sm-3 label-foodie">
 							<img src="img/survey_pics/Foodie_monika-grabkowska-323579-unsplash.jpg" class="img-responsive" alt="">
-						</center>
 					</div>
 
-					<div class="col-sm-3">
-						<center>
+					<div class="col-sm-3 label-explorer">
 							<img src="img/survey_pics/Explorer_whereslugo-418118-unsplash.jpg" class="img-responsive" alt="">
-						</center>
 					</div>
 
-				</form>
 			</div>
 			<!--/First row of pictures->
 
 			<!-- Second row of pictures-->
 			<div class="row">
-				<form class="exampleone">
-					<div class="col-sm-4">
-						<center>
+
+					<div class="col-sm-4 label-foodie">
 							<img src="img/survey_pics/Foodie_toa-heftiba-243296-unsplash.jpg" class="img-responsive" alt="">
-						</center>
 					</div>
-					<div class="col-sm-4">
-						<center>
+					<div class="col-sm-4 label-timeout">
 							<img src="img/survey_pics/Explorer_mag-pole-102167-unsplash.jpg" class="img-responsive" alt="">
-						</center>
 					</div>
 
-					<div class="col-sm-4">
-						<center>
+					<div class="col-sm-4 label-foodie">
 							<img src="img/survey_pics/Foodie_toa-heftiba-243296-unsplash.jpg" class="img-responsive" alt="">
-						</center>
 					</div>
-				</form>
 			</div>
+			</form>
 			<!-- /Second row of pictures-->
 
 			<!--Empty row for design purposes-->
@@ -155,10 +136,8 @@
 			<!--Row for the Submit button-->
 			<div class="row">
 
-				<div class="col-md-12">
-					<center>
-					<a href="video.html" class="btn main-btn">Get your recommendations!</a>
-					</center>
+				<div class="col-md-12 text-center">
+					<a id="get-recommendations-button" href="video.html" class="btn main-btn">Get your recommendations!</a>
 						<!--<p>
 							<b>imgCheckbox</b> automatically attaches to a parent form (if one is present).<br />
 							The <code>submit</code> event is captured and values are injected. Hit submit to see the form serialized below.
@@ -269,6 +248,35 @@
                     }
                 }
             });
+
+            $("#get-recommendations-button").click( function() {
+                    let number_of_checked = $('.imgChked').length;
+
+                    if (number_of_checked < 3) {
+                        alert("Select at least 3");
+                        return false;
+                    }
+
+					let number_of_checked_timeout = $('.label-timeout span.imgChked').length;
+					let number_of_checked_foodie = $('.label-foodie span.imgChked').length;
+					let number_of_checked_explorer = $('.label-explorer span.imgChked').length;
+//					alert(number_of_checked_timeout + ' ' + number_of_checked_foodie + ' ' + number_of_checked_explorer);
+
+					if (number_of_checked_explorer > number_of_checked_foodie + number_of_checked_timeout) {
+                        window.location.href = 'explorer.html';
+                        return false;
+					}
+
+                    if (number_of_checked_foodie > number_of_checked_explorer + number_of_checked_timeout) {
+                        window.location.href = 'foodie.html';
+                        return false;
+                    }
+
+
+                    window.location.href = 'video.html';
+                    return false;
+                }
+            );
 
 
 
