@@ -1837,10 +1837,10 @@ header {
     background-size: cover;
     height: 200px;
     padding: 0 5px;
-    border-right: white 10px solid;
+    border-right: #fff 10px solid;
     margin-bottom: 20px;
     background-repeat: no-repeat;
-    color: white!important;
+    color: #fff!important;
     font-size: 25px;
     font-weight: 600;
     text-align: center;
@@ -1859,4 +1859,49 @@ header {
 
 .inspire-me3{
 	background-image: url(../img/inspire-me/3.jpg);
+}
+
+/* --------------------About---------------------*/
+.aboutHeader{
+    background-image: url(../img/about.jpg);
+    background-size: cover;
+    height: 450px;
+    padding: 0 5px;
+    border-right: white 10px solid;
+    background-repeat: no-repeat;
+    font-size: 80px;
+    font-weight: 600;
+    text-align: center;
+    /*display: flex;
+    align-items: center;
+    justify-content: center;*/
+}
+.aboutHeader h1{
+	padding-top:100px;
+}
+
+.aboutHeader h1,
+.aboutHeader h3{
+	color: #6195FF!important;
+}
+.OurFunding{
+	background-image: url(../img/about1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 290px;
+    background-position: center;
+}
+
+.teamRow{
+	Padding:40px 0;
+}
+
+.teamInfo img{
+	text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+.teamRow .teamInfo .content{
+	text-align: center;
+    padding: 20px;
 }
