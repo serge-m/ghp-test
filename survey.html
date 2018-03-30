@@ -253,6 +253,31 @@
 	<script type="text/javascript" src="js/bootstrap-select.min.js"></script>
 	<script type="text/javascript" src="js/jquery.imgcheckbox.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">
+        (function($) {
+            "use strict"
+
+
+
+            $(".exampleone img").imgCheckbox();
+            $(".exampletwo img").imgCheckbox({
+                "styles": {
+                    "span.imgCheckbox.imgChked img": {
+                        "filter": "blur(5px)",
+                        "-webkit-filter": "blur(5px)",
+                        "transform": "scale(0.9)"
+                    }
+                }
+            });
+
+
+
+
+
+        })(jQuery);
+
+	</script>
+
 
 
 </body>
