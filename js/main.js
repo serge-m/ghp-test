@@ -173,6 +173,9 @@
 
     });
 
+    $( ".carousel-with-modals-item" ).wrapInner( "<a href=\"#\" data-toggle=\"modal\" data-target=\"#modal-for-video\"></a>");
+
+
 
 
 
