@@ -174,6 +174,7 @@
     });
 
     $( ".carousel-with-modals-item" ).wrapInner( "<a href=\"#\" data-toggle=\"modal\" data-target=\"#modal-for-video\"></a>");
+    $( ".carousel-with-modals-item video" ).wrap( "<div style=\"position: relative;\"></div>").parent().prepend("<div class=\"owl-video-play-icon\"></div>");
 
 
 
