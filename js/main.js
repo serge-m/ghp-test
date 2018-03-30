@@ -139,9 +139,14 @@
         let video = $(this).find("video");
         video.each(function () { this.pause() });
 
+        // trying to stop loading after modal is closed
+        video.attr('src', '');
+
         // for vimeo
         let iframe = $(this).find("iframe");
         iframe.attr("src", iframe.attr("src"));
+
+
     }).on('show.bs.modal', function (event) {
         const button = $(event.relatedTarget); // Button that triggered the modal
 
@@ -163,10 +168,10 @@
         modal.find('.modal-full-content').html('<div>' + description_html + '</div>');
 
 
-        // autoplay
+
         let video = modal.find('.modal-body video');
         video.attr('src', video_url);
-        // video.each(function () { this.play() });
+        // video.each(function () { this.play() }); // autoplay
         if (poster_url) {
             video.attr('poster', poster_url);
         }
