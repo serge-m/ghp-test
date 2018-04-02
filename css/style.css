@@ -1910,11 +1910,13 @@ header {
 .premium {
     position: absolute;
     z-index: 9;
-    font-size: 27px;
-    color: gold;
     padding: 11px;
-    width: 100%;
+    height: 40px;
+    width: 50px;
     direction: rtl;
+    background-image: url(../img/vidvaclogo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 .carousel-with-modals-item a{
 	width:100%;
