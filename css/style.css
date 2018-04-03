@@ -1840,6 +1840,11 @@ header {
     width: 100%;
 }
 
+.carousel-with-modals-item a {
+    color: inherit;
+}
+
+
 /* --------------------Inspire me ---------------------*/
 .inspire-me1,
 .inspire-me2,
