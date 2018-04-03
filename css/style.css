@@ -1909,7 +1909,7 @@ header {
 /* --------------------Premium content---------------------*/
 .premium {
     position: absolute;
-    z-index: 9;
+    z-index: 1;
     padding: 11px;
     height: 40px;
     width: 50px;
@@ -1920,4 +1920,23 @@ header {
 }
 .carousel-with-modals-item a{
 	width:100%;
+	display:block;
+	z-index:1;
 }
+
+/* --------------------Watchlist---------------------*/
+.addToWatchlist{
+    position: absolute;
+    z-index: 1;
+    padding: 11px;
+    height: 40px;
+    width: 50px!important;
+    background-image: url(../img/add-to-watchlist.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: 0px;
+}
+.addedToWatchlist{
+    background-image: url(../img/in-the-watchlist.png);
+}
+
