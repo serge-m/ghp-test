@@ -1,10 +1,45 @@
 (function($) {
 	"use strict"
 
+
+    function setCookie(key, value) {
+        const expires = new Date();
+        expires.setTime(expires.getTime() + (1 * 24 * 60 * 60 * 1000));
+        document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+    }
+
+    function getCookie(key) {
+        const keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+        return keyValue ? keyValue[2] : null;
+    }
+
+    $(".password-preloader-form form").submit( function() {
+            let password = $('#password-field').val();
+
+            if (password === 'better-try-it') {
+                setCookie('allowed', true);
+                window.location.href = 'index.html';
+                return false;
+            } else {
+                alert('Password is incorrect');
+                return false;
+            }
+        }
+    );
+
 	///////////////////////////
 	// Preloader
 	$(window).on('load', function() {
-		$("#preloader").delay(600).fadeOut();
+	    let allowed = getCookie('allowed');
+
+        if (allowed) {
+            // alert('allowed' + allowed);
+            $("#preloader").delay(600).fadeOut();
+        } else {
+            // alert('not allowed ' + allowed);
+            $(".password-preloader-form").show();
+            $(".preloader").hide();
+        }
 	});
 
 	///////////////////////////

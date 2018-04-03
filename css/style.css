@@ -753,7 +753,7 @@ header {
     -webkit-transform: translateY(100%);
     -ms-transform: translateY(100%);
     transform: translateY(100%);
-    opacity: 0;
+    opacity: 0.8;
     color: #FFF;
     margin-bottom: 10px;
     -webkit-transition: 0.2s all;
@@ -1794,6 +1794,16 @@ header {
 }
 
 
+.password-preloader-form {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
 /* ----------------------------carousel -----------------------*/
 
 .item-video {
@@ -1829,6 +1839,11 @@ header {
 .carousel-with-modals-item video {
     width: 100%;
 }
+
+.carousel-with-modals-item a {
+    color: inherit;
+}
+
 
 /* --------------------Inspire me ---------------------*/
 .inspire-me1,
