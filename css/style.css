@@ -726,6 +726,7 @@ header {
     right: 0px;
     bottom: 0px;
     opacity: 0;
+	margin: 0px 15px;
     -webkit-transition: 0.2s opacity;
     transition: 0.2s opacity;
     -webkit-transition-delay: 0.2s;
