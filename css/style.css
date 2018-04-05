@@ -1945,13 +1945,13 @@ header {
 .addToWatchlist{
     position: absolute;
     z-index: 1;
-    padding: 11px;
-    height: 40px;
+    top: 10px;
+    height: 30px;
+	right: -10px;
     width: 50px!important;
     background-image: url(../img/add-to-watchlist.png);
     background-repeat: no-repeat;
     background-size: contain;
-    right: 0px;
 }
 .addedToWatchlist{
     background-image: url(../img/in-the-watchlist.png);
