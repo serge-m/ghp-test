@@ -1955,3 +1955,10 @@ header {
     background-image: url(../img/in-the-watchlist.png);
 }
 
+/*--------------- Survey -------------------------*/
+.label-timeout,
+.label-explorer,
+.label-foodie {
+    padding-left: 0px;
+    padding-right: 0px;
+}
