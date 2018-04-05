@@ -1839,6 +1839,7 @@ header {
 
 .carousel-with-modals-item video {
     width: 100%;
+	margin-bottom: -10px;
 }
 
 .carousel-with-modals-item a {
