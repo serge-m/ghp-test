@@ -61,7 +61,9 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="video.html">Video</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeO5qZZ6agvokPHeaojlDSbrMRmfnncmpxWY1dKLoI7aM1bgw/viewform?usp=sf_link">Feedback</a></li>
+                <li>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeO5qZZ6agvokPHeaojlDSbrMRmfnncmpxWY1dKLoI7aM1bgw/viewform?usp=sf_link">Feedback</a>
+                </li>
             </ul>
             <!-- /Main navigation -->
 
@@ -79,12 +81,13 @@
                 <div class="modal-body">
                     <video src="" width="100%" controls>
                     </video>
-                    <div class="modal-full-content">default</div>
                 </div>
-
+                <div class="modal-full-content">default</div>
             </div>
+
         </div>
     </div>
+</div>
 
 
 </div>
@@ -103,11 +106,13 @@
                 <div class="carousel-with-modals-large owl-carousel owl-theme">
 
                     <div class="carousel-with-modals-item">
-						<span class="premium"></span> <!--premium content-->
+                        <span class="premium"></span> <!--premium content-->
                         <a href="./watchlist.html" class="addToWatchlist"></a> <!--Add to watchlist-->
-                        <video poster="https://serge-m.github.io/yourworld/img/burger-and-hiphop.png">
-                            <source data-src="//view.vzaar.com/13949685/video"/>
-                        </video>
+                        <div class="video-preview">
+                            <video poster="img/video_preview/burger-and-hiphop.jpg">
+                                <source data-src="//view.vzaar.com/13949685/video"/>
+                            </video>
+                        </div>
                         <p>Highsnobiety Visits | Burgers & Hip Hop</p>
                         <div class="video-description-full-version">
                             <h3>Highsnobiety Visits | Burgers & Hip Hop</h3>
@@ -115,13 +120,14 @@
                     </div>
 
                     <div class="carousel-with-modals-item">
-						<span class="premium"></span> <!--premium content-->
+                        <span class="premium"></span> <!--premium content-->
                         <a href="./watchlist.html" class="addToWatchlist"></a> <!--Add to watchlist-->
-						<div class="previewImage">
-                        <video poster="https://serge-m.github.io/yourworld/img/barn-berlin.png">
-                            <source data-src="//view.vzaar.com/13949687/video"/>
-                        </video>
-						</div>
+                        <div class="video-preview">
+                            <video poster="img/video_preview/barn-berlin.jpg">
+                                <source data-src="//view.vzaar.com/13949687/video"/>
+                            </video>
+                        </div>
+
                         <p>Highsnobiety Visits | The Barn Berlin</p>
                         <div class="video-description-full-version">
                             <h3>Highsnobiety Visits | The Barn Berlin</h3>
@@ -129,11 +135,13 @@
                     </div>
 
                     <div class="carousel-with-modals-item">
-						<span class="premium"></span> <!--premium content-->
+                        <span class="premium"></span> <!--premium content-->
                         <a href="./watchlist.html" class="addToWatchlist"></a> <!--Add to watchlist-->
-                        <video poster="https://serge-m.github.io/yourworld/img/street-food-berlin.png">
-                            <source data-src="//view.vzaar.com/13949718/video"/>
-                        </video>
+                        <div class="video-preview">
+                            <video poster="img/video_preview/street-food-berlin.jpg">
+                                <source data-src="//view.vzaar.com/13949718/video"/>
+                            </video>
+                        </div>
                         <p>Street Food Berlin - Here Are Our Top 5 Restaurants</p>
                         <div class="video-description-full-version">
                             <h3>Street Food Berlin - Here Are Our Top 5 Restaurants</h3>
@@ -141,11 +149,13 @@
                     </div>
 
                     <div class="carousel-with-modals-item">
-						<span class="premium"></span> <!--premium content-->
+                        <span class="premium"></span> <!--premium content-->
                         <a href="./watchlist.html" class="addToWatchlist"></a> <!--Add to watchlist-->
-                        <video poster="//view.vzaar.com/13949647/image">
-                            <source data-src="//view.vzaar.com/13949647/video"/>
-                        </video>
+                        <div class="video-preview">
+                            <video poster="//view.vzaar.com/13949647/image">
+                                <source data-src="//view.vzaar.com/13949647/video"/>
+                            </video>
+                        </div>
                         <p>24 Stunden Berlin: 5 Uhr Schwarzes Café</p>
                         <div class="video-description-full-version">
                             <h3>24 Stunden Berlin: 5 Uhr Schwarzes Café</h3>
@@ -153,11 +163,13 @@
                     </div>
 
                     <div class="carousel-with-modals-item">
-						<span class="premium"></span> <!--premium content-->
+                        <span class="premium"></span> <!--premium content-->
                         <a href="./watchlist.html" class="addToWatchlist"></a> <!--Add to watchlist-->
-                        <video poster="https://serge-m.github.io/yourworld/img/klunkerkranich.png">
-                            <source data-src="//view.vzaar.com/13949719/video"/>
-                        </video>
+                        <div class="video-preview">
+                            <video poster="img/video_preview/klunkerkranich.jpg">
+                                <source data-src="//view.vzaar.com/13949719/video"/>
+                            </video>
+                        </div>
                         <p>The Klunkerkranich bar in Berlin</p>
                         <div class="video-description-full-version">
                             <h3>The Klunkerkranich bar in Berlin</h3>
@@ -233,7 +245,7 @@
 <div id="preloader">
     <div class="password-preloader-form">
         <form>
-            <input id='password-field' placeholder="Enter your password here" />
+            <input id='password-field' placeholder="Enter your password here"/>
             <input type="submit" value="Enter">
         </form>
     </div>

@@ -1818,32 +1818,17 @@ header {
 .flight-selector.bootstrap-select button{
     padding: 10px 35px;
     margin: 10px;
-    /*border: 4px solid transparent;*/
-    /*width: 300px;*/
 }
-
-/*.flight-selector div {*/
-    /*width: 400px;*/
-    /*!*margin: 10px;*!*/
-/*}*/
 
 /* --------------------my modals ---------------------*/
 .video-description-full-version {
     display: none;
 }
 
-.carousel-with-modals-item {
-    /*height: 480px;*/
-    /*display: block;*/
-}
 
 .carousel-with-modals-item video {
     width: 100%;
 	margin-bottom: -10px;
-}
-
-.carousel-with-modals-item a {
-    color: inherit;
 }
 
 

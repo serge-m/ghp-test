@@ -192,9 +192,9 @@
 
         const poster_url = button.find('video').attr('poster');
 
-        // alert(button.text() + ' ' + video_url + ' ' + button.find('.full').html());
+        // alert(button.text() + ' +++ ' + video_url + ' +++ ' + button.parent().parent().html());
 
-        let description_html = button.find('.video-description-full-version').html();
+        let description_html = button.parent().parent().find('.video-description-full-version').html();
         if (description_html === undefined) {
             description_html = '';
         }
@@ -213,8 +213,11 @@
 
     });
 
-    $( ".carousel-with-modals-item" ).wrapInner( "<a href=\"#\" data-toggle=\"modal\" data-target=\"#modal-for-video\"></a>");
-    $( ".carousel-with-modals-item video" ).wrap( "<div style=\"position: relative;\"></div>").parent().prepend("<div class=\"owl-video-play-icon\"></div>");
+    // every video preview is wrapped into a button that opens it in a pop-up
+    $( ".video-preview" ).wrapInner( "<a href=\"#\" data-toggle=\"modal\" data-target=\"#modal-for-video\"></a>");
+
+    // play icon is added
+    $( ".video-preview video" ).wrap( "<div style=\"position: relative;\"></div>").parent().prepend("<div class=\"owl-video-play-icon\"></div>");
 
 
 

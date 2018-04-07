@@ -78,7 +78,7 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <video src="" width="100%" controls>
-                    </video>
+                    </video></div>
                     <div class="modal-full-content">default</div>
                 </div>
 
@@ -103,12 +103,12 @@
                 <div class="carousel-with-modals owl-carousel owl-theme">                   <!-- carousel-with-modals is for smaller previews, carousel-with-modals-large is for larger previews. See style.css -->
 
                     <div class="carousel-with-modals-item">  
-                               <!-- It is important to put 'carousel-with-modals-item' class. It is used in main.js to add links to popup and 'play' icons -->
+                               <!-- every item must be in  carousel-with-modals-item class -->
 						<span class="premium"></span> <!--premium content-->
 						<a href="./watchlist.html" class="addToWatchlist addedToWatchlist"></a> <!--Add to watchlist-->
-                        <video poster="//view.vzaar.com/13949653/image">                    <!-- poster should be a small image to load page faster -->
+                        <div class="video-preview"><video poster="//view.vzaar.com/13949653/image">                    <!-- div "video-preview" is important to add play icons and for popup functionality. poster should be a small image to load page faster -->
                             <source src="" data-src="//view.vzaar.com/13949653/video"/>     <!-- 'video' element must have 'source' element. and 'source' must have 'data-src' field that contains a link to video. See main.js for details -->
-                        </video>
+                        </video></div>
                         <p>Abandoned Berlin</p>                                             <!-- description visible in the carousel can go here. -->
                         <div class="video-description-full-version">                        <!-- description shown only in the popup must be in this 'div.video-description-full-version'. It is not shown in the carousel -->
                             <h3>Abandoned Berlin</h3>
@@ -127,11 +127,9 @@
                     <div class="carousel-with-modals-item">
 						<span class="premium"></span> <!--premium content-->
 						<a href="./watchlist.html" class="addToWatchlist"></a> <!--Add to watchlist-->
-                        <div class="previewImage" style="background-image: url(img/record.png);">
-						<video poster="//view.vzaar.com/13949672/image" style="opacity: 0;">
+						<div class="video-preview"><video poster="img/video_preview/record.jpg">
                             <source src="" data-src="//view.vzaar.com/13949672/video"/>
-                        </video>
-						</div>
+                        </video></div>
                         <p>Berlin's Best Record Stores</p>
                         <div class="video-description-full-version">
                             <h3>Berlin's Best Record Stores</h3>
@@ -141,11 +139,9 @@
                     <div class="carousel-with-modals-item">
 						<span class="premium"></span> <!--premium content-->
 						<a href="./watchlist.html" class="addToWatchlist addedToWatchlist"></a> <!--Add to watchlist-->
-						<div class="previewImage" style="background-image: url(img/markethalle.png);">
-                        <video poster="//view.vzaar.com/13949683/image" style="opacity: 0;">
+                        <div class="video-preview"><video poster="img/video_preview/markethalle.jpg">
                             <source src="" data-src="//view.vzaar.com/13949683/video"/>
-                        </video>
-						</div>
+                        </video></div>
                         <p>Markthalle Neun</p>
                         <div class="video-description-full-version">
                             <h3>Markthalle Neun</h3>
@@ -155,9 +151,9 @@
                     <div class="carousel-with-modals-item">
 						<span class="premium"></span> <!--premium content-->
 						<a href="./watchlist.html" class="addToWatchlist"></a> <!--Add to watchlist-->
-                        <video poster="//view.vzaar.com/13949674/image">
+                        <div class="video-preview"><video poster="//view.vzaar.com/13949674/image">
                             <source src="" data-src="//view.vzaar.com/13949674/video"/>
-                        </video>
+                        </video></div>
                         <p>Diving Berlin</p>
                         <div class="video-description-full-version">
                             <h3>Diving Berlin</h3>
@@ -167,9 +163,9 @@
                     <div class="carousel-with-modals-item">
 						<span class="premium"></span> <!--premium content-->
 						<a href="./watchlist.html" class="addToWatchlist addedToWatchlist"></a> <!--Add to watchlist-->
-                        <video poster="//view.vzaar.com/13949698/image">
+                        <div class="video-preview"><video poster="//view.vzaar.com/13949698/image">
                             <source src="" data-src="//view.vzaar.com/13949698/video"/>
-                        </video>
+                        </video></div>
                         <p>Highway to Hell</p>
                         <div class="video-description-full-version">
                             <h3>Highway to Hell</h3>
@@ -194,9 +190,9 @@
                     <div class="carousel-with-modals-item">
                         <span class="premium"></span> <!--premium content-->
 						<a href="./watchlist.html" class="addToWatchlist"></a> <!--Add to watchlist-->
-                        <video poster="https://serge-m.github.io/yourworld/img/an-afternoon.png">
+                        <div class="video-preview"><video poster="img/video_preview/an-afternoon.jpg">
                             <source src="" data-src="//view.vzaar.com/13949655/video"/>
-                        </video>
+                        </video></div>
                         <p>An Afternoon with Günther Anton</p>
                         <div class="video-description-full-version">
                             <h3>An Afternoon with Günther Anton</h3>
@@ -207,9 +203,9 @@
                     <div class="carousel-with-modals-item">
                         <span class="premium"></span> &lt;!&ndash;premium content&ndash;&gt;
 						<a href="./watchlist.html" class="addToWatchlist addedToWatchlist"></a> &lt;!&ndash;Add to watchlist&ndash;&gt;
-                        <video poster="//view.vzaar.com/13949674/image">
+                        <div class="video-preview"><video poster="//view.vzaar.com/13949674/image">
                             <source src="" data-src="//view.vzaar.com/13949674/video"/>
-                        </video>
+                        </video></div>
                         <p>Diving Berlin</p>
                         <div class="video-description-full-version">
                             <h3>Diving Berlin</h3>
@@ -219,9 +215,9 @@
                     <div class="carousel-with-modals-item">
                         <span class="premium"></span> <!--premium content-->
 						<a href="./watchlist.html" class="addToWatchlist"></a> <!--Add to watchlist-->
-                        <video poster="//view.vzaar.com/13949716/image">
+                        <div class="video-preview"><video poster="//view.vzaar.com/13949716/image">
                             <source src="" data-src="//view.vzaar.com/13949716/video"/>
-                        </video>
+                        </video></div>
                         <p>Speaking Gardens - The Berlin urban gardening movement</p>
                         <div class="video-description-full-version">
                             <h3>Speaking Gardens - The Berlin urban gardening movement</h3>
@@ -231,9 +227,9 @@
                     <div class="carousel-with-modals-item">
                         <span class="premium"></span> <!--premium content-->
 						<a href="./watchlist.html" class="addToWatchlist addedToWatchlist"></a> <!--Add to watchlist-->
-                        <video poster="https://serge-m.github.io/yourworld/img/berghainberlin.png">
+                        <div class="video-preview"><video poster="img/video_preview/berghainberlin.jpg">
                             <source src="" data-src="//view.vzaar.com/13949659/video"/>
-                        </video>
+                        </video></div>
                         <p>Berghain's bouncer Rummelsnuff shows us Berlin</p>
                         <div class="video-description-full-version">
                             <h3>Berghain's bouncer Rummelsnuff shows us Berlin</h3>
