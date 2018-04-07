@@ -280,6 +280,16 @@
         (function($) {
             "use strict"
 
+            function setCookie(key, value) {
+                const expires = new Date();
+                expires.setTime(expires.getTime() + (1 * 24 * 60 * 60 * 1000));
+                document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+            }
+
+            function getCookie(key) {
+                const keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+                return keyValue ? keyValue[2] : null;
+            }
 
 
             $(".exampleone img").imgCheckbox();
@@ -308,16 +318,19 @@
 
 					if (number_of_checked_explorer > number_of_checked_foodie + number_of_checked_timeout) {
                         window.location.href = 'video_explorer.html';
+                        setCookie('user-profile', 'explorer');
                         return false;
 					}
 
                     if (number_of_checked_foodie > number_of_checked_explorer + number_of_checked_timeout) {
                         window.location.href = 'video_foodie.html';
+                        setCookie('user-profile', 'foodie');
                         return false;
                     }
 
 
                     window.location.href = 'video.html';
+                    setCookie('user-profile', 'normal');
                     return false;
                 }
             );

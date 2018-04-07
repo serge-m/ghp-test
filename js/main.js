@@ -2,6 +2,8 @@
 	"use strict"
 
 
+
+    // password access
     function setCookie(key, value) {
         const expires = new Date();
         expires.setTime(expires.getTime() + (1 * 24 * 60 * 60 * 1000));
@@ -53,10 +55,18 @@
 	// Smooth scroll
 	$("#nav .main-nav a[href^='#']").on('click', function(e) {
 		e.preventDefault();
-		var hash = this.hash;
-		$('html, body').animate({
-			scrollTop: $(this.hash).offset().top
-		}, 600);
+        const hash = this.hash;
+        // console.log('hash=' + hash + '.');
+        const offset = $(this.hash).offset();
+        if (offset === undefined) {
+            console.log("Unable to find section " + hash);
+            return;
+        }
+
+        $('html, body').animate({
+            scrollTop: offset.top
+        }, 600);
+
 	});
 
 	$('#back-to-top').on('click', function(){
@@ -222,6 +232,18 @@
 
 
 
+    //////////////// start of menu profile selector /////////////////////////////
+    $(".has-dropdown ul li a").click(function(){
+
+
+        let image_source = $(this).find('img.avatar').attr('src');
+        // alert(image_source);
+        let img_selected_in_menu = $(this).parents('.has-dropdown').find('img.avatar').first();
+        img_selected_in_menu.attr('src', image_source);
+
+    });
+
+    //////////////// end of menu profile selector /////////////////////////////
 
 
 

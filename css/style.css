@@ -1887,11 +1887,9 @@ header {
 	color: #6195FF!important;
 }
 .OurFunding{
-	background-image: url(../img/about1.jpg);
-    background-repeat: no-repeat;
     background-size: cover;
     height: 290px;
-    background-position: center;
+    background: url(../img/about1.jpg) no-repeat center;
 }
 
 .teamRow{
@@ -1916,8 +1914,7 @@ header {
     height: 40px;
     width: 50px;
     direction: rtl;
-    background-image: url(../img/vidvaclogo.png);
-    background-repeat: no-repeat;
+    background: url(../img/vidvaclogo.png) no-repeat;
     background-size: contain;
 }
 .carousel-with-modals-item a{
@@ -1934,8 +1931,7 @@ header {
     height: 30px;
 	right: -10px;
     width: 50px!important;
-    background-image: url(../img/add-to-watchlist.png);
-    background-repeat: no-repeat;
+    background: url(../img/add-to-watchlist.png) no-repeat;
     background-size: contain;
 }
 .addedToWatchlist{
@@ -1946,12 +1942,18 @@ header {
 .label-timeout,
 .label-explorer,
 .label-foodie {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
 }
-/*--------------- preview image -------------------------*/
-.previewImage{
-    background-repeat: no-repeat;
-    background-size: cover;
+/*--------------- profile-avatars -------------------------*/
+
+
+.avatar {
+    vertical-align: middle;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    margin-top: -0.25em;
+    margin-bottom: -0.25em;
 
 }
