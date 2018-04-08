@@ -157,7 +157,7 @@ ul, ol {
     right: 0;
     bottom: 0;
     z-index: -1;
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -1993,7 +1993,7 @@ header {
 /*Medium devices (tablets, less than 992px)*/
 @media(max-width: 991.98px){
 	#home {
-		height: 130vh;
+		height: 120vh;
 	}
 }
 
