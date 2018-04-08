@@ -160,6 +160,7 @@ ul, ol {
     background-position: bottom;
     background-size: cover;
     background-attachment: fixed;
+	height: 100%;
 }
 
 .bg-img .overlay {
