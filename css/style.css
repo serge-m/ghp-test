@@ -1964,3 +1964,15 @@ header {
     padding:30px 0;
 
 }
+
+
+/*--------------------rating-----------------------------*/
+.rating-box {
+    display: flex;
+    position: absolute;
+    right: 20px;
+}
+
+.rating-box div {
+    margin-right: 5px;
+}
