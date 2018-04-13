@@ -1869,43 +1869,69 @@ header {
     background-image: url(../img/about.jpg);
     background-size: cover;
     height: 450px;
-    padding: 0 5px;
-    border-right: white 10px solid;
     background-repeat: no-repeat;
-    font-size: 80px;
     font-weight: 600;
     text-align: center;
-    /*display: flex;
-    align-items: center;
-    justify-content: center;*/
+	padding: 0px;
 }
 .aboutHeader h1{
-	padding-top:100px;
+	background-color: rgba(0, 0, 0, 0.3);
+	height:100%;
+}
+.aboutHeader p{
+	top:50%;
+	position:relative;
+	font-size:30px;
+	color:#fff;
+	/*color: #6195FF;*/
+	height:100%;
 }
 
-.aboutHeader h1,
-.aboutHeader h3{
-	color: #6195FF!important;
+.heading {
+    font-size: 40px;
+	padding: 40px 0;
+	text-align: center;
 }
+
+.heading:after {
+    content: "";
+	height: 4px;
+	width: 40px;
+	background-color: #6195FF;
+	margin-top: 20px;
+	display: inline-block;
+}
+
+
 .OurFunding{
     background-size: cover;
-    height: 290px;
-    background: url(../img/about1.jpg) no-repeat center;
+    height: 330px;
+    background: url(../img/our-funding.jpg) no-repeat center;
+}
+
+.OurMission{
+    background-size: cover;
+    height: 330px;
+    background: url(../img/our-mission.jpg) no-repeat center;
 }
 
 .teamRow{
-	Padding:40px 0;
+	Padding:70px 0;
+	text-align: center;
 }
 
 .teamInfo img{
 	text-align: center;
-    margin: 0 auto;
-    display: block;
+	margin: 10px 0px;
+	width: 100%;
+	height: auto;
 }
-.teamRow .teamInfo .content{
-	text-align: center;
-    padding: 20px;
+
+.teamInfo p{
+	font-size: 14px;
+	font-weight: 200;
 }
+
 
 /* --------------------Premium content---------------------*/
 .premium {
