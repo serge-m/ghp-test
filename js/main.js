@@ -267,6 +267,13 @@
     });
 
     SetRatingStar();
+	
+	////// Info appear
+
+    $('.appearInfo').on('click', function(){
+		$('.infoText').addClass('appear');
+		$(this).addClass('disappear');
+	});
 
 
 })(jQuery);

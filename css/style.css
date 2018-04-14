@@ -1965,6 +1965,11 @@ header {
     background-image: url(../img/in-the-watchlist.png);
 }
 
+.watchlistHeader {
+    padding:30px 0;
+
+}
+
 /*--------------- Survey -------------------------*/
 .label-timeout,
 .label-explorer,
@@ -1973,8 +1978,6 @@ header {
     padding-right: 0;
 }
 /*--------------- profile-avatars -------------------------*/
-
-
 .avatar {
     vertical-align: middle;
     width: 1.5em;
@@ -1984,15 +1987,6 @@ header {
     margin-bottom: -0.25em;
 
 }
-/*--------------- watchlist -------------------------*/
-
-
-.watchlistHeader {
-    padding:30px 0;
-
-}
-
-
 /*--------------------rating-----------------------------*/
 .rating-box {
     display: flex;
@@ -2002,6 +1996,37 @@ header {
 
 .rating-box div {
     margin-right: 5px;
+}
+
+/*--------------------Homepage----------------------------*/
+.appearInfo{
+    color: #fff;
+	padding-top: 300px;
+	bottom: 50%;
+	right: 42%;
+	position: absolute;
+	opacity:1;
+	z-index: 1;
+}
+
+.infoText{
+    opacity:0;
+}
+
+.appear{
+	transition: opacity 0.35s ease-out;
+	-o-transition: opacity 0.35s ease-out;
+	-moz-transition: opacity 0.35s ease-out;
+	-webkit-transition: opacity 0.35s ease-out;
+	opacity:1;
+}
+
+.disappear{
+	transition: opacity 0.35s ease-out;
+	-o-transition: opacity 0.35s ease-out;
+	-moz-transition: opacity 0.35s ease-out;
+	-webkit-transition: opacity 0.35s ease-out;
+	opacity: 0 !important;
 }
 
 /*--------------------Responsiveness-----------------------------*/
