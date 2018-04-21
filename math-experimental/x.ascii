@@ -1,1 +1,16 @@
 
+[env.theorem]
+--
+A two-by-two matrix is invertible if
+its determinant is nonzero, i.e., if
++++
+\[
+  \left|\begin{matrix}
+    a & b \\
+    c & d
+  \end{matrix}\right| \ne 0
+\]
++++
+
+This result extends to pass:[\(n\times n\)] matrices.
+--
