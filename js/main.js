@@ -32,7 +32,7 @@
 	///////////////////////////
 	// Preloader
 	$(window).on('load', function() {
-	    let allowed = getCookie('allowed');
+	    let allowed = true;
 
         if (allowed) {
             // alert('allowed' + allowed);
