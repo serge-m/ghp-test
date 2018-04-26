@@ -268,8 +268,6 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 .navbar-brand .logo, .navbar-brand .logo-alt {
     max-height: 50px;
     display: block;
-    /*padding-top: 15px;*/
-    /*padding-bottom: 15px;*/
 }
 
 #nav:not(.nav-transparent):not(.fixed-nav) .navbar-brand .logo-alt {
@@ -2165,4 +2163,9 @@ header {
 and (min-device-width : 768px)
 and (max-device-width : 1024px)  {
     .bg-img { background-attachment: scroll !important; }
+}
+
+
+div.first-container {
+    padding-top: 80px;
 }
