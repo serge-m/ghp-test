@@ -151,6 +151,7 @@ ul, ol {
 /* --  background image section  -- */
 
 .bg-img {
+    height: 100vh;
     position: absolute;
     left: 0;
     top: 0;
@@ -158,9 +159,8 @@ ul, ol {
     bottom: 0;
     z-index: -1;
     background-position: bottom;
-    background-size: cover;
     background-attachment: fixed;
-	height: 100%;
+    background-size: cover;
 }
 
 .bg-img .overlay {
@@ -268,8 +268,8 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 .navbar-brand .logo, .navbar-brand .logo-alt {
     max-height: 50px;
     display: block;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    /*padding-top: 15px;*/
+    /*padding-bottom: 15px;*/
 }
 
 #nav:not(.nav-transparent):not(.fixed-nav) .navbar-brand .logo-alt {
@@ -307,6 +307,10 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 }
 
 #nav.navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
     border: none;
     border-radius: 0;
     margin-bottom: 0px;
@@ -582,7 +586,7 @@ header {
 }
 
 #home {
-    height: 100vh;
+    padding-top: 100vh;
 }
 
 #home .home-wrapper {
@@ -2156,3 +2160,9 @@ header {
 		height: 160vh;
 	}
  }
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  {
+    .bg-img { background-attachment: scroll !important; }
+}
