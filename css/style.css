@@ -307,6 +307,10 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 }
 
 #nav.navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
     border: none;
     border-radius: 0;
     margin-bottom: 0px;
