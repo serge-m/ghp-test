@@ -212,14 +212,31 @@
         let modal = $(this);
         modal.find('.modal-full-content').html('<div>' + description_html + '</div>');
 
+        // alert(video_url + " --> " + video_url.startsWith("https://youtube.com"));
 
+        if (video_url.startsWith("https://youtube.com") ||
+            video_url.startsWith("https://www.youtube.com")) {
 
-        let video = modal.find('.modal-body video');
-        video.attr('src', video_url);
-        // video.each(function () { this.play() }); // autoplay
-        if (poster_url) {
-            video.attr('poster', poster_url);
+            let iframe = modal.find('.modal-body iframe.youtube');
+            iframe.show();
+            modal.find('.modal-body video').hide();
+
+            let iframe_url = video_url + "?rel=0&amp;showinfo=0";
+
+            iframe.attr('src', iframe_url);
         }
+        else {
+            let video = modal.find('.modal-body video');
+            // video.each(function () { this.play() }); // autoplay
+            video.show();
+            modal.find('.modal-body iframe').hide();
+            video.attr('src', video_url);
+            if (poster_url) {
+                video.attr('poster', poster_url);
+
+            }
+        }
+
 
     });
 
